@@ -1,0 +1,41 @@
+{
+    "name": "setup-typescript-and-node",
+    "version": "1.0.0",
+    "description": "This is a quick setup for projects with Node.js and TypeScript",
+    "main": "src/server.ts",
+    "scripts": {
+        "start": "tsc && node dist/src/server.js",
+        "start:dev": "tsx watch src/server.ts",
+        "test": "jest --passWithNoTests",
+        "test:watch": "yarn test --watch",
+        "test:staged": "yarn test --findRelatedTests",
+        "test:push": "test --coverage",
+        "lint": "eslint 'src/**/*.ts'",
+        "lint:fix": "eslint 'src/**/*.ts' --fix",
+        "husky:prepare": "husky install"
+    },
+    "keywords": [
+        "typescript",
+        "node.js",
+        "setup"
+    ],
+    "author": "Julio Fiamoncini",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^29.5.10",
+        "@types/node": "^20.10.2",
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
+        "eslint": "^8.55.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "git-commit-msg-linter": "^5.0.4",
+        "husky": "^8.0.3",
+        "jest": "^29.7.0",
+        "lint-staged": "^15.1.0",
+        "prettier": "^3.1.0",
+        "ts-jest": "^29.1.1",
+        "tsx": "^4.6.2",
+        "typescript": "^5.3.2"
+    }
+}
