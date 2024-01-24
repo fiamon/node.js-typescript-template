@@ -4,11 +4,12 @@
     "description": "This is a quick setup for projects with Node.js and TypeScript",
     "main": "src/server.ts",
     "scripts": {
-        "start": "tsc && node dist/server.js",
+        "build": "tsc",
+        "start": "node dist/server.js",
         "start:dev": "tsx watch src/server.ts",
         "test": "vitest --passWithNoTests",
         "test:watch": "vitest dev --passWithNoTests",
-        "test:push": "vitest --coverage",
+        "test:push": "vitest run --coverage",
         "husky:prepare": "husky install",
         "coverage:types": "typescript-coverage-report"
     },
@@ -20,10 +21,9 @@
     "author": "Julio Fiamoncini",
     "license": "MIT",
     "devDependencies": {
-        "@types/cors": "^2",
+        "@types/cors": "^2.8.17",
         "@types/express": "^4.17.21",
         "@types/node": "^20.10.2",
-        "@types/supertest": "^6.0.2",
         "@typescript-eslint/eslint-plugin": "^6.13.1",
         "@typescript-eslint/parser": "^6.13.1",
         "@vitest/coverage-v8": "^1.2.1",
@@ -34,20 +34,18 @@
         "husky": "^8.0.3",
         "lint-staged": "^15.1.0",
         "prettier": "^3.1.0",
-        "supertest": "^6.3.4",
+        "prisma": "^5.8.1",
         "tsx": "^4.6.2",
         "typescript": "^5.3.2",
         "typescript-coverage-report": "^0.8.0",
         "vitest": "^1.2.1"
     },
     "dependencies": {
+        "@prisma/client": "5.8.1",
         "cors": "^2.8.5",
         "dotenv": "^16.4.0",
         "express": "^4.18.2",
         "helmet": "^7.1.0",
-        "pg": "^8.11.3",
-        "pg-hstore": "^2.3.4",
-        "sequelize": "^6.35.2",
         "zod": "^3.22.4"
     }
 }
