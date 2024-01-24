@@ -4,7 +4,7 @@
     "description": "This is a quick setup for projects with Node.js and TypeScript",
     "main": "src/server.ts",
     "scripts": {
-        "start": "tsc && node dist/src/server.js",
+        "start": "tsc && node dist/server.js",
         "start:dev": "tsx watch src/server.ts",
         "test": "jest --passWithNoTests",
         "test:watch": "yarn test --watch",
@@ -40,6 +40,10 @@
         "typescript": "^5.3.2"
     },
     "dependencies": {
-        "express": "^4.18.2"
+        "dotenv": "^16.4.0",
+        "express": "^4.18.2",
+        "pg": "^8.11.3",
+        "sequelize": "^6.35.2",
+        "zod": "^3.22.4"
     }
 }
