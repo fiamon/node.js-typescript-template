@@ -3,8 +3,12 @@ import { z } from 'zod';
 
 const envSchema = z.object({
     NODE_ENV: z.enum(['development', 'production']).default('development'),
-    DATABASE_URL: z.string(),
     PORT: z.coerce.number().default(8080),
+
+    DB_NAME: z.string(),
+    DB_USER: z.string(),
+    DB_PASSWORD: z.coerce.string(),
+    DATABASE_URL: z.string(),
 });
 
 const _env = envSchema.safeParse(process.env);
