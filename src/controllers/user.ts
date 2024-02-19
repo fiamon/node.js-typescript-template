@@ -1,5 +1,5 @@
 export default class UserController {
-    getAll(): string {
+    getHello(): string {
         return 'hello';
     }
 }

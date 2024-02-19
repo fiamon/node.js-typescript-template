@@ -9,9 +9,8 @@
         "start:dev": "tsx watch src/server.ts",
         "test": "vitest --passWithNoTests",
         "test:watch": "vitest dev --passWithNoTests",
-        "test:push": "vitest run --coverage",
-        "husky:prepare": "husky install",
-        "coverage:types": "typescript-coverage-report"
+        "test:coverage": "vitest run --coverage",
+        "types:coverage": "typescript-coverage-report"
     },
     "keywords": [
         "typescript",
