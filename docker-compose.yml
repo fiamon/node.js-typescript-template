@@ -1,13 +1,4 @@
 services:
-  api:
-    container_name: teste-tecnico-node
-    build: .
-    command: ["npm", "start"]
-    depends_on:
-      - postgres
-    ports:
-      - 8080:8080
-
   postgres:
     image: postgres:16.1
     env_file:
